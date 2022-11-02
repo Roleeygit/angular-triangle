@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>{{title}}</h1>
+
+
+  <div class="triangleForm">
+
+    <div class="mb-3">
+      <label for="base" class="form-label">Alap: </label>
+      <input type="text" id="base" [(ngModel)]="base" class="form-control" required>
+    </div>
+
+    <div>
+      <label for="height" class="form-label">Magasság: </label>
+      <input type="text" id="height" [(ngModel)]="height" class="form-control" required>
+      <br>
+    </div>
+          <button (click)="calcArea()" class="btn btn-danger">Számít</button>
+          <button (click)="hideArea()" class="btn btn-info ms-2">Rejt</button>
+
+    <div class="mb-3" *ngIf="areaShow">
+      <br>
+      <label for="base" class="form-label">Terület: </label>
+      <input type="text" id="area" [(ngModel)]="area" class="form-control">
+    </div>
+
+  </div>
+  <div class="bg-success mt-3 p-1 ms-3">
+    Juhász Roland
+    Szoft II N
+    22-11-2
+  </div>
+
+</div>
